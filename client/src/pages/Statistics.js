@@ -81,8 +81,10 @@ const Statistics = () => {
       >
         <div onChange={onRadioChangeValue}>
           how would you like to see your statistics?
+          <br />
           <input type="radio" value="ListPage" name="stats" />
           table- general stats
+          <br />
           <input type="radio" value="ChartsPage" name="stats" /> charts - more
           specific
         </div>
