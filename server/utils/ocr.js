@@ -1,10 +1,10 @@
 const fs = require("fs");
 const util = require("util");
 const sharp = require("sharp");
-// const rectangles = [
-//   { left: 0, top: 450, width: 750, height: 550 },
-//   // { left: 30, bottom: 550, width: 710, height: 250 },
-// ];
+const rectangles = [
+  { left: 0, top: 450, width: 750, height: 550 },
+  // { left: 30, bottom: 550, width: 710, height: 250 },
+];
 
 const { createWorker } = require("tesseract.js");
 const preProcessImage = async (image) => {
@@ -32,7 +32,7 @@ async function recognize(file) {
   const values = [];
   const {
     data: { text },
-  } = await worker.recognize(file);
+  } = await worker.recognize(file, rectangles[0]);
   values.push(text);
 
   await worker.terminate();
@@ -71,4 +71,5 @@ const OCR = async (image) => {
   // console.log(filteredPrice);
   return filteredPrice;
 };
+
 module.exports = OCR;

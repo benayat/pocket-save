@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const OCR = require("../utils/ocr");
+const OCR2 = require("../utils/ocrWithApi");
 const ObjectId = mongoose.Types.ObjectId;
 const Budget = require("./budgetModel");
 const Family = require("./familyModel");
@@ -43,7 +44,7 @@ OCRed the document and got the total from the receipt.
 transactionSchema.pre("save", async function (next) {
   if (this.scan) {
     console.log("scanning receipt now");
-    this.amount = await OCR(this.scan);
+    this.amount = await OCR2(this.scan);
     console.log(this.amount);
   }
   const familyBudget = await Budget.findById(this.familyBudget);
