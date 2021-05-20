@@ -16,7 +16,7 @@ app.use(router);
 
 // # use alternate localhost and the port Heroku assigns to $PORT
 // const host = "0.0.0.0";
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
   console.log("server is up on 5000");
 });
