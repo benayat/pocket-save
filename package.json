@@ -2,6 +2,10 @@
   "name": "pocket-save",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "npm": "7.10.0",
+    "node": "16.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
