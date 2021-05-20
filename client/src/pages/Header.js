@@ -66,7 +66,7 @@ const Header = () => {
         )}
         {authToken && (
           <div className="homeLink" key="logout">
-            {currentUser.name}
+            {currentUser && currentUser.name}
             <Link to="/crud/user/authentication/logout">
               <img src={logoutIcon} alt="logout" title="logout" />
             </Link>

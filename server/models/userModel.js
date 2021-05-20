@@ -103,7 +103,7 @@ userSchema.pre("save", async function (next) {
     user.password = await bcrypt.hash(user.password, 8);
   }
   if (!user.userBudget) {
-    const budget = new Budget({ total: 100 });
+    const budget = new Budget({ total: 1000 });
     await budget.save();
     user.userBudget = budget._id;
   }

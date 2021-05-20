@@ -10,6 +10,7 @@ import { useContext } from "react";
 const Home = (props) => {
   const { currentUser } = useContext(AuthContext);
   const isAdmin = currentUser && currentUser.userType === "admin";
+  console.log(currentUser.userType);
 
   return (
     <div>
