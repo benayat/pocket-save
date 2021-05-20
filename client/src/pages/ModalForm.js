@@ -8,14 +8,8 @@ import { AuthContext } from "../utils/context/AuthContext";
 import { SetResponsePopup } from "../utils/setResponsePopup";
 
 const ModalForm = () => {
-  const {
-    authToken,
-    setCurrentUser,
-    logout,
-    setCurrentFamily,
-    family,
-    currentUser,
-  } = useContext(AuthContext);
+  const { authToken, setCurrentUser, logout, currentUser } =
+    useContext(AuthContext);
   const { type, actionType, action } = useParams();
   const history = useHistory();
   const [open, setOpen] = useState(true);

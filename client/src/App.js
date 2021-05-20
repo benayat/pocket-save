@@ -14,15 +14,18 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <Route path="/">
+          <Header />
+        </Route>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/statistics">
+        {/* <Route path="/statistics">
           <Header />
         </Route>
         <Route path="/crud">
           <Header />
-        </Route>
+        </Route> */}
         <Route path="/crud/:type/">
           <Crud />
           {/* <AddPage icons={{ clientIcon, bankAccountIcon, transactionIcon }} /> */}

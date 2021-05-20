@@ -1,10 +1,14 @@
+.container-homePage {
+  display: flex;
+  justify-content: space-between;
+}
 .homeLink {
   display: inline;
   margin-right: 3vh;
 }
 .homeLink img {
   max-width: 10vh;
-  height: auto;
+  height: 10vh;
 }
 
 .admin {

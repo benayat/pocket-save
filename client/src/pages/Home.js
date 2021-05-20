@@ -4,7 +4,12 @@ import userIcon from "../images/userIcon.jfif";
 import adminIcon from "../images/adminIcon.jfif";
 import bankCrudIcon from "../images/bankCrud.jfif";
 import statisticsIcon from "../images/statisticsIcon.png";
+import { AuthContext } from "../utils/context/AuthContext";
+import { useContext } from "react";
+
 const Home = (props) => {
+  const { authToken, setCurrentUser, logout, currentUser } =
+    useContext(AuthContext);
   return (
     <div>
       <h1 className="mainHeader">POCKET-SAVE USER INTERFACE</h1>

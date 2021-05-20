@@ -35,44 +35,7 @@ const AuthProvider = (props) => {
     dispatch({ type: "SET_TRANSACTIONS", payload: transactions });
     dispatch({ type: "REQUEST_FINISHED" });
   };
-  //   const getAllFamilyMembers = useCallback(async () => {
-  //     try {
-  //       dispatch({ type: "SENDING_REQUEST" });
-  //       const familyMembers = await getAll();
-  //       dispatch({ type: "REQUEST_FINISHED" });
-  //       dispatch({ type: "SET_FAMILY_MEMBERS", payload: familyMembers });
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }, [getAll]);
-  //   const deleteFamilyMember = async (label) => {
-  //     try {
-  //       dispatch({ type: "SENDING_REQUEST" });
-  //       await deleteByLabel(label);
-  //       const newFamilyMembers = await getAll();
-  //       dispatch({ type: "REQUEST_FINISHED" });
-  //       dispatch({ type: "SET_FAMILY_MEMBERS", payload: newFamilyMembers });
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
 
-  //moves:
-  /* 
-    - adding family member object to the store.
-    - updating members and names databases.
-
-  */
-  //   const addFamilyMember = async (familyMember) => {
-  //     try {
-  //       dispatch({ type: "SENDING_REQUEST" });
-  //       await set(familyMember);
-  //       dispatch({ type: "REQUEST_FINISHED" });
-  //       await getAllFamilyMembers();
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
   return (
     <AuthContext.Provider
       value={{
