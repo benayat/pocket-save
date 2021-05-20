@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const budgetSchema = mongoose.Schema({
   total: {
     type: Number,
-    default: 100,
+    default: 1000,
     validate(value) {
       value >= 0;
     },
