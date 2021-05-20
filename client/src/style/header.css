@@ -1,0 +1,22 @@
+.homeLink {
+  display: inline;
+  margin-right: 3vh;
+}
+.homeLink img {
+  max-width: 10vh;
+  height: auto;
+}
+
+.admin {
+  max-height: 10vh;
+  position: absolute;
+  top: 15vh;
+  left: 47%;
+}
+
+.user {
+  max-height: 10vh;
+  position: absolute;
+  top: 10vh;
+  left: 5vw;
+}

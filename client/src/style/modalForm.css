@@ -1,0 +1,35 @@
+.open-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  background-color: antiquewhite;
+  border-radius: 3px;
+  border: rgba(177, 104, 104, 0.4) 2px solid;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 50vw;
+  padding: 5px;
+}
+.open-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+/* .open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgb(158, 157, 233);
+} */
+.popup-overlay {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(../images/walletBackground.jpg);
+}
