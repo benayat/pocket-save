@@ -8,8 +8,9 @@ import { AuthContext } from "../utils/context/AuthContext";
 import { useContext } from "react";
 
 const Home = (props) => {
-  const { authToken, setCurrentUser, logout, currentUser } =
-    useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+  const isAdmin = currentUser && currentUser.userType === "admin";
+
   return (
     <div>
       <h1 className="mainHeader">POCKET-SAVE USER INTERFACE</h1>
@@ -21,13 +22,15 @@ const Home = (props) => {
           src={{ userIcon, adminIcon }}
           icon={bankCrudIcon}
         />
-        <ActionCard
-          key="transfer"
-          headline="Statistics"
-          types={["", ""]}
-          src={{ userIcon, adminIcon }}
-          icon={statisticsIcon}
-        />
+        {isAdmin && (
+          <ActionCard
+            key="statistics"
+            headline="Statistics"
+            types={["", ""]}
+            src={{ userIcon, adminIcon }}
+            icon={statisticsIcon}
+          />
+        )}
       </div>
     </div>
   );

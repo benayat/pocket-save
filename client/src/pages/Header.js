@@ -13,7 +13,7 @@ import { useContext } from "react";
 const Header = () => {
   const { authToken, currentUser } = useContext(AuthContext);
   const type = window.location.href.split("/")[3];
-  const isAdmin = currentUser && currentUser.userType;
+  const isAdmin = currentUser && currentUser.userType === "admin";
   return (
     <div key="container-homePage" className="container-homePage">
       <div className="home-container-left">
@@ -66,6 +66,7 @@ const Header = () => {
         )}
         {authToken && (
           <div className="homeLink" key="logout">
+            {currentUser.name}
             <Link to="/crud/user/authentication/logout">
               <img src={logoutIcon} alt="logout" title="logout" />
             </Link>
