@@ -1,7 +1,7 @@
 import "../style/modalForm.css";
 import axios from "axios";
 import { useEffect, useContext, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { useHistory } from "react-router";
 import Popup from "reactjs-popup";
 // import Form from "../components/Form";
 import { AuthContext } from "../utils/context/AuthContext";
@@ -9,15 +9,8 @@ import { SetResponsePopup } from "../utils/setResponsePopup";
 
 const Statistics = () => {
   const history = useHistory();
-  const {
-    authToken,
-    setCurrentUser,
-    setCurrentFamily,
-    family,
-    currentUser,
-    transactions,
-    setTransactions,
-  } = useContext(AuthContext);
+  const { authToken, setCurrentFamily, family, setTransactions } =
+    useContext(AuthContext);
   const [open, setOpen] = useState(true);
   const [displayUrl, setDisplayUrl] = useState(null);
   const [loading, setLoading] = useState(true);

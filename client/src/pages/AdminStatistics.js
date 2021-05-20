@@ -1,15 +1,14 @@
 import "../style/modalForm.css";
 import axios from "axios";
 import { useEffect, useContext, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { useHistory } from "react-router";
 import Popup from "reactjs-popup";
-import Form from "../components/Form";
+// import Form from "../components/Form";
 import { AuthContext } from "../utils/context/AuthContext";
 
 const AdminStatistics = () => {
   const history = useHistory;
-  const { authToken, setCurrentUser, setCurrentFamily, family, currentUser } =
-    useContext(AuthContext);
+  const { authToken, setCurrentFamily, family } = useContext(AuthContext);
   const [open, setOpen] = useState(true);
   const [displayUrl, setDisplayUrl] = useState(null);
   const [loading, setLoading] = useState(true);
