@@ -1,7 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-// import axios from "axios";
-// import localForage from "localforage";
 import "../style/listPage.css";
 import Table from "../components/Table";
 import bankAccountIcon from "../images/bankAccountIcon.jpg";
@@ -15,8 +13,6 @@ const ListPage = (props) => {
   const [collection, setCollection] = useState(null);
   const { type } = useParams();
   console.log(family);
-  // console.log("collection", collection.users, loaded, collection.users.length);
-
   useEffect(() => {
     const loader = async () => {
       const currentCollection = !loaded && family && family.users;
